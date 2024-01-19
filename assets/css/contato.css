@@ -1,0 +1,142 @@
+/*
+    Exemplo de força de marcadores:
+    tag = força 1
+    class = força 10
+    id = força 100
+    tag + class = força 11
+    id + tag = força 101
+    css inline = força 1000 - superior a todos
+
+*/
+
+.painel {
+    background: var(--cor-cinza-escuro);
+    height: 50vh;
+}
+
+.conteudo {
+    width: 600px;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    color: var(--cor-branco);
+    cursor: default;
+    user-select: none;
+    z-index: 0;
+}
+
+.conteudo h2 {
+    /* ocupa somente o espaço necessário para o texto e não a linha toda */
+    display: inline;   /* inline, block, flex, none  */
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration:underline var(--cor-dourado);
+    /*
+    border-bottom: 3px solid var(--cor-dourado); 
+    */
+}
+
+.conteudo p {
+    font-size: 18px;
+    margin-top: 30px;
+    line-height: 1.5em;
+    margin-bottom: 30px;
+}
+
+.conteudo a {
+    background: var(--cor-verde-limao);
+    color: var(--cor-branco);
+    padding:15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.conteudo a:hover {
+    background: var(--cor-dourado);
+    padding: 1.1em;
+}
+
+.container {
+    width: 800px;
+    margin-inline: auto;  /* centraliza em relação à tela  */
+    /* permite que z-index funcione corretamente */
+    display: flex;
+}
+
+form {
+    background: var(--cor-branco);
+    width: 100%;
+    /*   vertical horizontal */
+    padding: 40px 40px;
+    border: 1px solid var(--cor-cinza-escuro);
+    border-radius: 10px;
+    box-shadow: 12px 12px 12px var(--cor-cinza);
+    margin: -60px 0 40px -40px ;
+    z-index: 1;
+}
+
+form label, legend {
+    /* padrão de label e input é inline (ocupa somente o espaço dele) */
+    display: block;  /* label ocupa a linha inteira fazendo com que input seja jogado abaixo */
+    font-size: 22px;
+    color: var(--cor-texto);
+    margin: 10px 0 10px 10px;
+}
+
+form > input, textarea {
+    font-size: 22px;
+    color: var(--cor-texto);
+    width: 95%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--cor-cinza-claro);
+}
+
+input:focus, textarea:focus {
+    outline-style: solid;
+    outline-color: var(--cor-verde-limao);
+}
+
+form > textarea {
+    max-width: 95%;
+    min-height: 100px;
+    max-height: 300px;
+}
+
+form > fieldset {
+    /* margem superior e inferior */
+    margin-block: 20px;
+}
+
+form > fieldset select {
+    font-size: 18px;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+
+/* segundo filho do final para o iníio do formulário */
+form > label:nth-last-child(2) {
+    margin-block: 20px;
+}
+
+form > button {
+    width: 35%;
+    background: var(--cor-verde-limao);
+    padding: 15px 0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 1s all;  /* background */
+}
+
+form > button:hover {
+    background: var(--cor-dourado);
+    /* aumena o botão em 20% */
+    transform: scale(1.2);
+}

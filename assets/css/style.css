@@ -1,0 +1,111 @@
+/*variáveis css globais*/
+/* Variáveis CSS globais */
+:root {
+
+    --cor-neve: #fffafa;  /* snow color */
+    --cor-verde-claro: #e3fbe3;
+    --cor-verde-musgo: #1e821eb3;
+    --cor-verde-transparente: #e3fbe380;
+    --cor-verde-limao: limegreen;
+    --cor-preto: #000000;
+    --cor-branco: #ffffff;
+    --cor-cinza: #aaaaaa;
+    --cor-cinza-escuro: #000000b0;
+    --cor-cinza-claro: #dcdcdc;
+    --cor-dourado: #eb783f;
+    --cor-texto: #212529;
+
+    --altura-titulo: 2em;      /* 1 em = 32px   */
+    --altura-subtiulo: 1.5em;
+}
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: var(--cor-neve);
+}
+
+header{
+    background: var(--cor-verde-claro);
+    padding-block: 16px;
+    padding-inline: 16px;
+}
+
+nav{
+    height: 175px;
+    max-width: 1280px;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    gap: 32px;
+    user-select: none;
+   
+    
+}
+
+nav ul a{
+    color: var(--cor-preto);
+    font-size: 22pz;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav ul a:hover{
+    color: var(--cor-dourado);
+    text-decoration: underline;
+
+}
+
+.banner{
+    width: 100vw;
+}
+
+footer{
+    text-align: center;
+    background: url(../img/bg.png);
+    padding-block: 16px;
+}
+
+footer p{
+    color: var(--cor-branco);
+    font-size: 13px;
+    margin-top: 16px;
+    cursor: default;
+    user-select: none;
+}
+
+/*--------------------------*/
+
+@media only screen and (max-width: 800px){
+    nav{
+        justify-content: right;
+    }
+
+    nav ul{
+        position: fixed;
+        top: 8px;
+        left: 8px;
+
+        flex-direction: column;
+        gap: 8px;
+        background: var(--cor-verde-transparente);
+        border: 1px solid var(--cor-verde-limao);
+        border-radius: 10px;
+        padding: 5px;
+    }
+}
+
+.icone-fa{
+    color: var(--cor-verde-musgo);
+    font-size: 0.8em;
+    margin-right: 0.3em;
+}

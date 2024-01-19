@@ -1,0 +1,154 @@
+/*
+    pseudo-elementos css: usado para estilizar uma parte do elemento
+    formato: seletor::pseudo-elemento
+    ::after ::before ::first-letter ::first-line ::marker ::selection
+
+    pseudo classes css: usado para definir um estado especial do elemento
+    formato: seletor:pseudo-classe
+    :root :hover : focus :active :link :visited :first-child :nth-child
+*/
+
+
+.section-empresa{
+    max-width: 940px;
+    margin-inline: auto;
+    text-align: justify;
+    padding-top: 2em; /*duas vezes a altura padrão da fonte*/
+    padding-inline: 1em; /*enchimento horizontal*/
+    user-select: none;
+}
+
+.section-empresa h2{
+    text-align: center;
+    font-size: var(--altura-titulo);
+    margin: 0 0 1em;
+    color: var(--cor-verde-musgo);
+}
+
+.section-empresa h2::first-letter{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.section-empresa p{
+    margin: 0 0 1em;
+    line-height: 1.3em; /*espaçamento entre linhas*/
+}
+
+.section-empresa p span{
+    margin-inline-start: 2em;
+}
+
+.section-empresa p strong{
+    font-weight: bold;
+    color: var(--cor-verde-limao);
+}
+
+.section-empresa p em{
+    font-style: italic;
+    font-size: 1.3em;
+}
+
+/*---------------------------------------------------------------*/
+
+.section-produtos{
+    display: flex;
+    flex-direction: column;
+    max-width: 940px;
+
+    margin-inline: auto;
+    margin-bottom: 10px;
+    margin-top: 2em;
+    padding-inline: 1em;
+    user-select: none;
+}
+.section-produtos h3{
+    margin-inline: auto;
+    margin-bottom: 1em;
+    font-size: var(--altura-subtitulo);
+}
+
+.div-produtos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.div-produtos ul{
+    width: 135px;
+    font-style: italic;
+    line-height: 2.6em;
+}
+
+/*http://xahlee.info/comp/unicode_index.html*/
+.div-produtos li::before{
+    content: "🍃";
+    font-size: 0.9em;
+    margin-right: 1em;
+}
+
+/*pseudo-classes:
+    first-child
+    last-child
+    nth-child(x), = filho n
+    nth-child(2) = filho 2
+    nth-child(2n) = filhos pares
+    nth-child(2n+1) = filhos ímpares
+    nth-child(even) = pares
+    nth-child(odd) = ímpares
+*/
+
+.div-produtos li:nth-child(odd){
+    font-weight: bold;
+}
+
+.div-produtos li:hover{
+    font-size: 1.1em; /*aumenta 10%*/
+}
+
+.section-produtos img{
+    width: 36%;
+    opacity: 1;
+    transition: 1s;
+    box-shadow: 8px 8px 8px 0 var(--cor-cinza);
+}
+
+.section-produtos img:hover{
+    opacity: 0.7;
+}
+
+.video{
+    width: 320px;
+    height: 220px;
+    margin-right: 10px;
+}
+
+.section-mapa{
+    border: 1px solid var(--cor-cinza);
+    height: 35vh;
+}
+
+/*-----------------------------------*/
+
+@media only screen and(max-width: 800px){
+    .div-produtos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div-produtos ul{
+        line-height: 1.5em;
+    }
+
+    .section-produtos img{
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    .video{
+        width: 70%;
+        height: 300px;
+        margin-right: 0;
+    }
+}

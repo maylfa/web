@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Verde | Contato</title>
+
+    <meta name="description" content="Formulário de contato">
+    <meta name="robots" content="index,follow"> 
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/contato.css">
+    <link rel="shortcut icon" href="assets/img/favicon_32px.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/fe23b0531d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <a href="index.html">
+                <h1><img src="assets/img/logo-header.png" alt="Logo Mundo Verde"></h1>
+            </a>
+
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house icone-fa"></i>HOME</a></li>
+                <li><a href="produtos.html"><i class="fa-solid fa-store icone-fa"></i>Produtos</a></li>
+                <li><a href="contato.html"><i class="fa-solid fa-phone icone-fa"></i>Contato</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <div class="painel">
+
+            <div class="conteudo">
+                <h2>CONTATO</h2>
+
+                <p>Se tiver alguma dúvida, sugestão ou interesse em algum de nossos produtos,
+                    converse com nossa equipe de atendimento!
+                </p>
+
+                <a href="https://api.whatsapp.com/send?phone=5542998710050">
+                    <i class="fa fa-whatsapp"></i>
+                    Atendimento via Whatsapp
+                </a>
+            </div>
+
+        </div>
+
+        <div class="container">
+
+            <!-- formsubmit.co é apenas um endereço (endpoint) usado para testar recebimento do formulário -->
+            <form action="https://formsubmit.co/ajax/mayy.lfa@gmail.com" method="post">
+
+                <!-- mobileinputtypes.com -->
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="nome completo" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="email@dominio.com.br" required>
+
+                <label for="telefone">Telefone</label>
+                <input type="tel" name="telefone" id="telefone" placeholder="(xx)xxxxx-xxxx" required>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" id="mensagem" cols="70" rows="0"></textarea>
+
+                <!-- tag semântica substitui div em formulário -->
+                <fieldset>
+                    <legend>Como prefere o nosso contato?</legend>
+
+                    <label for="radio-whatsapp">
+                        <input type="radio" name="contato" value="whatsapp"
+                               id="radio-whatsapp" checked>
+                               Whatsapp
+                        </input>
+                    </label>
+
+                    <label for="radio-telefone">
+                        <input type="radio" name="contato" value="telefone"
+                               id="radio-telefone">
+                               Telefone
+                        </input>
+                    </label>
+
+                    <label for="radio-email">
+                        <input type="radio" name="contato" value="email"
+                               id="radio-email">
+                               E-mail
+                        </input>
+                    </label>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Produtos que tenho interesse</legend>
+                    <select name="categoria">
+                        <option value="1">Cereais</option>
+                        <option value="2">Suplementos</option>
+                        <option value="3">Temperos</option>
+                    </select>
+                </fieldset>
+
+                <label>
+                    <input type="checkbox" name="ofertas" checked>
+                        Quero receber ofertas por e-mail
+                    </input>
+                </label>
+
+                <button type="submit">Enviar Dados</button>
+            </form>
+            
+        </div>
+
+    </main>
+    
+
+    <footer>
+        <img src="assets/img/logo-rodape.png" alt="Logo Mundo Verde">
+        <!-- unicode-table.com/pt
+            symbl.cc/pt/html-entities/
+        -->
+        <p>&copy;Copyright Mundo Verde</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+#nenhum rastreador (exceto AdsBot) têm permissão para rastrear os diretórios css e js.
+#Google precisa deles para renderização, então o Googlebot é permitido para rastreá-los.
+
+User-agent: *
+Disallow: /assets/css/
+Disallow: /assets/js/
+
+User-agent: Googlebot
+Allow: /assets/
